@@ -50,16 +50,18 @@ public class Main {
     }
 
     static void opt1(Scanner scanner) {
-        double base, HBase, HTP;
+        double base, sideA, sideB, HTP;
         System.out.println("Input:");
         System.out.print("Base\t\t\t\t: ");
         base = scanner.nextDouble();
-        System.out.print("Height of Base\t\t: ");
-        HBase = scanner.nextDouble();
+        System.out.print("Side A\t\t\t\t: ");
+        sideA = scanner.nextDouble();
+        System.out.print("Side B\t\t\t\t: ");
+        sideB = scanner.nextDouble();
         System.out.print("Height of\nTriangular Pyramid\t: ");
         HTP = scanner.nextDouble();
 
-        TriangularPyramid TP = new TriangularPyramid(base, HBase, HTP);
+        TriangularPyramid TP = new TriangularPyramid(base, sideA, sideB, HTP);
         System.out.println("\n=========================\n" +
                            "\nOutput:\n" +
                            "Triangle:\n" +

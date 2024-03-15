@@ -1,20 +1,21 @@
 package bangunDatar;
 
 public class Triangle implements BangunDatar {
-    public double base, height;
+    public double base, sideA, sideB;
 
-    public Triangle(double base, double height) {
+    public Triangle(double base, double sideA, double sideB) {
         this.base = base;
-        this.height = height;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     public double area() {
-        return 0.5 * base * height;
+        double s = perimeter() / 2;
+        return Math.sqrt(s*(s - base) * (s - sideA) * (s - sideB));
     }
 
     public double perimeter() {
-        double side = Math.sqrt(Math.pow(0.5 * base, 2) + Math.pow(height, 2));
-        return side * 2 + base;
+        return base + sideA + sideB;
     }
 
     @Override

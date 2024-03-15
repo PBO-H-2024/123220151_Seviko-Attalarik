@@ -4,8 +4,8 @@ import bangunDatar.Triangle;
 
 public class TriangularPyramid extends Triangle implements BangunRuang {
     double pyramidHeight;
-    public TriangularPyramid (double b, double h, double pyramidHeight) {
-        super(b, h);
+    public TriangularPyramid (double b, double SA, double SB, double pyramidHeight) {
+        super(b, SA, SB);
         this.pyramidHeight = pyramidHeight;
     }
 
