@@ -54,6 +54,7 @@ public class CHOSEN extends GUI {
         goBack.setBounds(150, 220, 100, 30);
 
         submit.addActionListener(e -> {
+            //if the either one of all the input is empty then show an error
             if (inputNIM.getText().isEmpty() || scoreExam.getText().isEmpty() || coding.getText().isEmpty() || interview.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Data cannot be empty");
                 return;
@@ -64,6 +65,7 @@ public class CHOSEN extends GUI {
             double code = Double.parseDouble(coding.getText());
             double interviewScore = Double.parseDouble(interview.getText());
 
+            //if the input is not between 0 and 100 then show an error
             if (exam < 0 || exam > 100 || code < 0 || code > 100 || interviewScore < 0 || interviewScore > 100) {
                 JOptionPane.showMessageDialog(null, "Data must be between 0 and 100");
                 return;

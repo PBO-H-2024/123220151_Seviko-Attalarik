@@ -30,6 +30,7 @@ public class Processing extends JFrame{
 
         double finalScore = examScore + codingScore + interviewScore;
 
+        //if the final score is less than 85 then show not accepted
         if (finalScore < 85) {
             JOptionPane.showMessageDialog(null, "Not Accepted");
             return;
