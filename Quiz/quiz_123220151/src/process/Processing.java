@@ -30,9 +30,6 @@ public class Processing extends JFrame{
 
         double finalScore = examScore + codingScore + interviewScore;
 
-        System.out.println("NIM: " + nim);
-        System.out.println("Mean: " + finalScore);
-
         if (finalScore < 85) {
             JOptionPane.showMessageDialog(null, "Ditolak");
             return;
