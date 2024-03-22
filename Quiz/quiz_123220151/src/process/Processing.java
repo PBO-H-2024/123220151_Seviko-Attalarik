@@ -31,10 +31,10 @@ public class Processing extends JFrame{
         double finalScore = examScore + codingScore + interviewScore;
 
         if (finalScore < 85) {
-            JOptionPane.showMessageDialog(null, "Ditolak");
+            JOptionPane.showMessageDialog(null, "Not Accepted");
             return;
         } else if (finalScore > 85 && finalScore < 100) {
-            JOptionPane.showMessageDialog(null, "Diterima");
+            JOptionPane.showMessageDialog(null, "Accepted");
         }
     }
 }

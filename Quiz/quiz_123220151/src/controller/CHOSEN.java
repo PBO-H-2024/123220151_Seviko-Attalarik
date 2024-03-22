@@ -5,12 +5,12 @@ import process.Processing;
 
 public class CHOSEN extends GUI {
     String chosen;
-    
+
     public CHOSEN(JFrame frame, String chosen) {
         super(frame);
         this.frame = frame;
         this.chosen = chosen;
-        JLabel judul = new JLabel("Masukkan data");
+        JLabel judul = new JLabel("Masukkan data " + '(' + chosen + ')');
         JLabel NIMLabel = new JLabel("NIM");
         JLabel scoreExamLabel = new JLabel("Exam Score");
         JLabel codingLabel = new JLabel("Coding Score");
@@ -23,13 +23,12 @@ public class CHOSEN extends GUI {
         JButton goBack = new JButton("Go Back");
 
         frame.getContentPane().removeAll();
-
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(290, 300);
         frame.setLayout(null);
         frame.setLocationRelativeTo(null);
-        
+
         frame.add(judul);
         frame.add(inputNIM);
         frame.add(scoreExam);
@@ -42,7 +41,7 @@ public class CHOSEN extends GUI {
         frame.add(submit);
         frame.add(goBack);
 
-        judul.setBounds(10, 10, 100, 30);
+        judul.setBounds(10, 10, 200, 30);
         NIMLabel.setBounds(10, 60, 100, 30);
         inputNIM.setBounds(150, 60, 100, 30);
         scoreExamLabel.setBounds(10, 100, 100, 30);
@@ -56,7 +55,7 @@ public class CHOSEN extends GUI {
 
         submit.addActionListener(e -> {
             if (inputNIM.getText().isEmpty() || scoreExam.getText().isEmpty() || coding.getText().isEmpty() || interview.getText().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Data tidak boleh kosong");
+                JOptionPane.showMessageDialog(null, "Data cannot be empty");
                 return;
             }
 
@@ -66,7 +65,7 @@ public class CHOSEN extends GUI {
             double interviewScore = Double.parseDouble(interview.getText());
 
             if (exam < 0 || exam > 100 || code < 0 || code > 100 || interviewScore < 0 || interviewScore > 100) {
-                JOptionPane.showMessageDialog(null, "Data harus berupa angka dan antara 0-100");
+                JOptionPane.showMessageDialog(null, "Data must be between 0 and 100");
                 return;
             }
 
